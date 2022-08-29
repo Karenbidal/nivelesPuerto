@@ -16,7 +16,8 @@ public class ScheduleService {
     @Autowired
     private PuertoService puertoService;
 
-    @Scheduled(cron = "0 0 0 * * ?")
+    //@Scheduled(cron = "0 0 0 * * ?") */5 * * * *
+    @Scheduled(cron = "*/5 * * * *")
     public void schedulePuertosService() throws GeneralSecurityException, IOException, ParseException {
         puertoService.guardarNivelesPuertos();
     }
